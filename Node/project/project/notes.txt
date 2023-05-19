@@ -1,0 +1,172 @@
+Nodejs
+1- web application --> repsone HTML pages  (express --> views)
+/lgoin get --> load html login pages (sumbit)
+/lgoin post --> check 
+/profile 
+2- API 
+
+
+lecture API :  Node server API
+
+http request (data)
+
+url   ,
+method : get url     /depretments?id=3     department not found 
+                    /depertments
+         post  httpBody
+                    /students    -> body http
+                   
+         put , patch 
+                    /student   -> body http
+         delete
+                    /student  -> body http
+
+//1- end point  --> routes     
+        endpoint 1 :    domian/departments  get --> return all departments
+        endpoint 1 :    domian/students     get --> return all students
+        endpoint 1 :    domian/students?id=2     get --> return student id=2;
+
+
+//2-  MVC Model
+
+Model  :  files == Entities 
+        studentSchema.js , departmentSchema.js
+Controller :  crud opeartions methods applied on Model
+        studentController.js , departmentControler.js 
+Routes : endPoints for Entites 
+        studentRoutre.js , departmentRouter.js
+
+//3-   data inside http request  get,post ,patch,delete
+
+
+http  get :   1-url as query string
+               /departments?id=2
+              2-url paramter
+              /departments/2
+      patch,post,delete:
+             1-url as query string
+               /departments?id=2
+             2-url paramter
+              /departments/2
+             3- http body
+
+
+//-----------------MongoDB
+
+
+SQL : (Tables) --> rows 
+MongoDB: (collections)  --> documents every document-> JSON
+MongoDB  interperting using JS enterpeter:SpiderMonkey Engine
+
+collection students
+doucmunt         {id:1,name:"x",email:""}
+document         {id:2,name:"y",email:""}
+document         {id:2,name:"y",email:""}
+
+
+//1- installation
+//2- enviroment variables --> add bin path mongodb server
+//3-  open server  (open service)
+//4- create c:/data/db
+cmd -->   mongod       server localhost:27017
+
+
+//5- talk mongodb server as a client 
+1-  command prompt mongosh
+2-  GUI TOOL 
+3-  drivers  
+
+
+
+
+
+
+/************************************
+DB Connection -> Model 
+
+mongodb  : localhost:27017  
+Nodejs   :localhost:8080
+
+Package --> mongoose   ODM (Object Document Mapper)
+
+
+
+1- install mongoose
+3- for only one time   , setup for connection --> app.js
+2- Model file for every  entity, schema
+4- Contoller -> crud operations  
+
+
+
+/***********************************************
+Authentication: Who are you??  userName and password
+Authorization:  rights , permissions
+
+
+
+API  --> stateless server
+Tokens ,  jwt token or OAuth token 
+use : jsonwebtoken  jwt 
+
+1-  client(Eman)  send request    /login
+sever : check username and password  -> Authenticated
+
+A- generate small Object (named token)  
+{
+        _id:Eman,
+        userName:Eman,
+        role:Admin
+}
+
+B-  object --> encryption using secret key
+C-  send object with resposne 
+
+2- fornt End , recieve token
+
+
+every request Eman --> send token with request in http headers
+
+
+3- server search for token in request -> decryption -> scret key
+
+
+
+
+
+/*************Lab assignmnets
+1- Authenticated and Authorization
+2- Encrypt  password    bcrypt (Bonus)
+3- autoIncrement package for _id -> Child Schema
+
+//student
+{
+    "id: 3,
+    "name: "ibrahim",
+     "age":16,
+     "email": "ibrahim@gmail.com",
+     "password": "123",
+     "class":2
+}
+
+// teacher
+{
+    "id": 9,
+    "name": "osama",
+    "age":35,
+    "class":2
+}
+
+admin token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwidXNlck5hbWUiOiJtYXlhZGEiLCJpYXQiOjE2ODExMDcxNjEsImV4cCI6MTY4MTExMDc2MX0.vReMRQAKJCWFFpnp1UzUkjAw5i-oYH4Pjrg3lvkkNxY
+
+
+
+
+
+
+
+
+
+
+
+
