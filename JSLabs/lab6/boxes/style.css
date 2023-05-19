@@ -1,0 +1,18 @@
+div{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    cursor: pointer;
+}
+.unclicked{
+    cursor:not-allowed;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}

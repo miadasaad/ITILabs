@@ -1,0 +1,51 @@
+.textStyle{
+    text-decoration-line: line-through;
+}
+body{
+    background-color: #22435B;
+}
+div{
+    width: 800px;
+    margin: 0 auto;
+    color: #FFB1A3;
+}
+h2{
+    font-size: 75px;
+}
+input{
+    padding: 20px 25px;
+    border-radius: 15px;
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+input::placeholder{
+    color: #22435B;
+    font-size: 20px;
+}
+button{
+    background: #ffb1a3!important;
+    outline: none!important;
+    border-color: transparent!important;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+button.diff{
+    width: 58px;
+    height: 58px;  
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+td{
+    border: 1px solid #ffb1a3;
+    padding: 10px;
+}
+td:nth-child(2){
+    width:76%;
+}

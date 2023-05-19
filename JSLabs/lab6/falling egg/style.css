@@ -1,0 +1,14 @@
+img{
+    position: absolute;
+    width:250px !important;
+    height: 250px !important; 
+}
+.basket{
+    left: 50%;
+}
+.basket ,.broken{
+    bottom: 0;
+}
+.hidden{
+    display: none;
+}

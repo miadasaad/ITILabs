@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //console.log(number1); // error number1 is not defined
+       // console.log(number2);  // error number2 is not defined
+    </script>
+</head>
+<body>
+    <script src="external.js"></script>
+    <script>
+        console.log(number1);//3
+        console.log(number2); //2.9
+    </script>
+
+    <script>
+      //  a- Summation of number1 and number2
+      console.log(number1 + number2);//5.9
+      //Summation of number1 and numbers array
+      console.log(number1 + numbers[0]+ numbers[1]+numbers[2]);//111
+      //Summation of flag and number2
+      console.log(flag + number2); //3.9
+      //Summation of firstName and flag
+      console.log(firstName +flag);//Mayadatrue
+      //Summation of number1 and firstName
+      console.log(number1 + firstName);//3Mayada
+      //Multiplication of number1 and flag
+      console.log(number1 * flag); //3
+      //Divide number1 and latName
+      console.log(number1/lastName);//NaN
+      //Print your full Name with firstName , middleName and 
+      //lastName variables with string template and backtick (ES6).
+      console.log(`${firstName} ${middleName} ${lastName}`);
+      //Display all array values on console
+      for(var i=0; i<numbers.length ; i++){
+        console.log(numbers[i]);
+      }
+    </script>
+</body>
+</html>

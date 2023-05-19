@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  
+<style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size:x-large;
+            font-weight:bold;
+			background-color:lightGrey;
+        }
+        [type=text],[type=button]
+        {
+            font-family:'Century Gothic';
+            font-size:large;
+        }
+
+        table {
+            width: 400px;
+        
+        }
+        span{ color:red;}
+        .SD {
+            background-color: lightpink;
+        }
+
+        .OS {
+            background-color: lightyellow;
+        }
+
+        .EL {
+            background-color: lightskyblue;
+        }
+        #nameError{
+            color: red;
+        }
+        .hidden{
+            visibility: hidden;
+        }
+        .displayNone{
+            display: none;
+        }
+        .deleteSty{
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+
+         
+    
+</head>
+<body>
+ 
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                    Department:
+                    <input type="radio" name="Department" value="SD" checked="checked" />SD
+                    <input type="radio" name="Department" value="OS" />OS
+                    <input type="radio" name="Department" value="EL" />EL
+                </td>
+            </tr>
+            
+            <tr>
+                <td>StudentName<input type="text" name="studentName"  />
+                </td><td><span class="hidden" id="nameError">Required</span></td>
+                <td><span class="hidden" id="nameFound">Name is found</span></td>
+            </tr>
+
+            <tr><td>StudentGrade<input type="text" name="studentGrade"  /></td><td><span class="hidden" id="gardeError">should be number</span></td></tr>
+            
+			<tr><td><input type="button"  value="Add" /></td></tr>
+            <!-- <tr><td>Search<input type="text" name="searchTxt"  /></td><td><span id="gardeError">should be number</span></td></tr> -->
+           
+            <tr>
+                <td colspan="2">
+                    Filter:
+                    <select name="grading">
+                        <option value="all" selected="selected">All</option>
+                        <option value="success">Success</option>
+                        <option value="fail" >Fail</option>
+                    </select>
+                    
+                </td>
+            </tr>
+        </table>
+        </form>
+        <table></table>    
+        <script src="functions.js"></script>            
+<script src="consuming.js"></script>
+
+</body>
+</html>
